@@ -1,0 +1,31 @@
+# Dependencies and generated builds
+node_modules/
+.next/
+out/
+dist/
+coverage/
+*.tsbuildinfo
+
+# Local work files and previews (selected previews live in docs/images)
+tmp/
+output/
+*.log
+*.zip
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+.vercel/
+.netlify/
+.npmrc
+.codex/
+.agents/
+*.pem
+*.key
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
