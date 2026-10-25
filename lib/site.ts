@@ -3,7 +3,6 @@ export const company = {
   whatsapp: '557193457167',
   instagram: 'https://www.instagram.com/gtblockcomercial/',
   instagramHandle: '@gtblockcomercial',
-  recoveries: 'https://gtblock.com.br/recuperados/fotos/',
   tracking: 'https://sis.getrak.com/gtblock/',
 };
 

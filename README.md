@@ -44,8 +44,8 @@ Build e checagem de tipos validados em 24/10/2026. Menu, abas, galeria e FAQ for
 ## Conteúdo e identidade
 
 - `lib/site.ts`: contato comercial, links externos e quatro planos do briefing.
-- `components/PricingSection.tsx`: promoção COMBAT com vencimento explícito em 31/10/2026. A página é pré-renderizada; recompile após alterações de conteúdo ou expiração da oferta.
-- `components/FAQ.tsx`: perguntas frequentes e condições da promoção.
+- `components/PricingSection.tsx`: apresentação dos planos; instalação a combinar em todos eles. A página é pré-renderizada; recompile após alterações de conteúdo.
+- `components/FAQ.tsx`: perguntas frequentes e condições de instalação.
 - `app/globals.css`: layout, cores, tipografia, breakpoints e movimento reduzido.
 - `public/brand/`: arquivos oficiais da identidade visual em PNG e versões WebP otimizadas.
 - `public/images/`: imagem automotiva criada para a página.

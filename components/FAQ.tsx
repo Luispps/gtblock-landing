@@ -6,7 +6,7 @@ const questions = [
   ['Qual é a diferença entre rastreamento e bloqueio?', 'O rastreamento permite acompanhar a localização do veículo. O bloqueio remoto é um recurso adicional, disponível nos planos COMBAT e PLUS, que auxilia na imobilização do veículo, com orientação da equipe e conforme as condições de segurança.'],
   ['Qual a diferença entre os planos 2G e 4G?', 'A diferença está na rede móvel utilizada para transmitir os dados do rastreador. O 4G oferece maior capacidade de transmissão. Nossa equipe ajuda a avaliar a cobertura da região e a compatibilidade com o seu veículo antes da contratação.'],
   ['O que devo fazer em caso de roubo ou furto?', 'Entre em contato imediatamente com a central de atendimento da GTBLOCK pelos canais informados na contratação e acione as autoridades. A equipe orientará os próximos passos. Por segurança, não tente recuperar o veículo por conta própria.'],
-  ['Existe taxa de instalação?', 'A instalação custa R$ 100,00. No plano COMBAT, a instalação é gratuita na promoção válida até 31 de outubro de 2026. Consulte a equipe sobre disponibilidade, condições e valores após essa data.'],
+  ['Qual é o valor da instalação?', 'O valor da instalação é a combinar em todos os planos. Converse com nossa equipe pelo WhatsApp para definir os valores, as condições e o agendamento.'],
 ];
 export default function FAQ() {
   return <section className="faq-section section-space" id="duvidas"><div className="shell faq-grid">

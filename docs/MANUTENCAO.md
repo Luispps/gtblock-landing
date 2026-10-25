@@ -35,14 +35,14 @@ Após alterações de interface, conferir:
 | --- | --- |
 | WhatsApp, Instagram, área do cliente e URLs | `lib/site.ts` |
 | Nomes, valores e recursos dos planos | `lib/site.ts` |
-| Promoção e data de vencimento | `components/PricingSection.tsx` e `components/PricingCard.tsx` |
-| Respostas do FAQ, incluindo promoção | `components/FAQ.tsx` |
+| Condições de instalação | `components/PricingSection.tsx` e `components/PricingCard.tsx` |
+| Respostas do FAQ, incluindo instalação | `components/FAQ.tsx` |
 | Textos e fotos da pronta resposta | `components/RecoverySection.tsx` |
 | Título, descrição e favicon | `app/layout.tsx` |
 | Cores, tipografia e layout | `app/globals.css` |
 | Efeitos e navegação lateral | `components/ScrollEffects.tsx` e `components/ui.tsx` |
 
-O contato comercial foi preservado conforme o briefing. A promoção atual do COMBAT vence em **31/10/2026**. Como a página é pré-renderizada, publique um novo build após a expiração ou alteração da oferta e atualize também o FAQ.
+O contato comercial foi preservado conforme o briefing. A instalação é a combinar em todos os planos, sem promoção de instalação gratuita. Como a página é pré-renderizada, publique um novo build após alterar valores ou condições e atualize também o FAQ.
 
 ## Atualizar as fotos
 
