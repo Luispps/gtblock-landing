@@ -50,6 +50,7 @@ A composição visual usa classes próprias em `app/globals.css` e variáveis CS
 - A navegação lateral observa as seções com `IntersectionObserver`. A linha de progresso usa os valores de rolagem do Framer Motion.
 - Os efeitos de entrada rodam uma vez. Em telas de até 600 px, usam menor deslocamento e atraso; a paralaxe é desativada. A preferência `prefers-reduced-motion` é respeitada.
 - O FAQ usa `<details>` e `<summary>` nativos.
+- Os planos se elevam ao passar o mouse em telas a partir de 768 px com ponteiro preciso. O foco por teclado também destaca o card. Em dispositivos de toque, o retorno visual usa borda, sombra e pressão no botão, sem ampliar o plano, exigir um primeiro toque de seleção ou interferir na rolagem. Os links de contratação continuam sendo links diretos para o WhatsApp.
 
 ## Integrações e limites
 

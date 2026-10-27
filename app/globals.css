@@ -163,8 +163,8 @@ h2 { font-size: clamp(34px, 3.55vw, 52px); line-height: 1.12; letter-spacing: -2
 .promo-banner strong { font-weight: 650; }
 .promo-deadline { font-size: 8px; font-weight: 650; letter-spacing: 1px; white-space: nowrap; }
 .pricing-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; padding-top: 8px; margin-top: 46px; }
-.pricing-grid > div { min-width: 0; display: flex; }
-.pricing-card { padding: 28px 24px 23px; border: 1px solid #23251b20; border-radius: 7px; background: #ffffff5c; position: relative; display: flex; flex-direction: column; flex: 1; }
+.pricing-grid > div { min-width: 0; display: flex; position: relative; }
+.pricing-card { padding: 28px 24px 23px; border: 1px solid #23251b20; border-radius: 7px; background: #ffffff5c; position: relative; display: flex; flex-direction: column; flex: 1; transition: transform .32s cubic-bezier(.22,1,.36,1), box-shadow .32s ease, border-color .25s ease, background .25s ease; }
 .plan-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
 .plan-icon { color: #8e7946; }
 .generation { border: 1px solid #8d917860; border-radius: 3px; padding: 4px 7px; display: flex; gap: 5px; align-items: center; font-size: 9px; color: #696e5c; }
@@ -193,6 +193,26 @@ h2 { font-size: clamp(34px, 3.55vw, 52px); line-height: 1.12; letter-spacing: -2
 .pricing-featured .plan-divider { background: #ffffff18; }
 .pricing-featured ul { color: #d0d2be; }
 .pricing-featured li svg { color: var(--gold); }
+.pricing-grid > div:focus-within { z-index: 2; }
+.pricing-card:focus-within { border-color: #a17e36; box-shadow: 0 0 0 2px #d4b57240, 0 15px 35px #25261520; }
+.pricing-card .button > svg { transition: transform .25s ease; }
+.pricing-card .button:focus-visible > svg { transform: translate(2px, -2px); }
+/* Lift only on devices with a precise pointer and room around the cards. */
+@media (min-width: 768px) and (hover: hover) and (pointer: fine) {
+  .pricing-grid > div:hover { z-index: 3; }
+  .pricing-card:hover, .pricing-card:focus-within { transform: translateY(-12px) scale(1.025); border-color: #ba944d; box-shadow: 0 22px 45px #25261526, 0 0 0 1px #d9bd7c50; }
+  .pricing-card:not(.pricing-featured):hover, .pricing-card:not(.pricing-featured):focus-within { background: #fffdf6; }
+  .pricing-featured:hover, .pricing-featured:focus-within { border-color: #edce88; box-shadow: 0 22px 45px #25261538, 0 0 0 1px #d9bd7c85; }
+  .pricing-card:hover .button-plan, .pricing-card:focus-within .button-plan { background: linear-gradient(110deg, #e5c77e, #f1dca7 54%, #d8b769); color: #19180f; border-color: #cfb174; }
+  .pricing-card .button:hover > svg { transform: translate(2px, -2px); }
+}
+/* Touch feedback never changes card size or intercepts the purchase link. */
+@media (hover: none), (pointer: coarse) {
+  .pricing-card:active { border-color: #b18d45; box-shadow: 0 8px 24px #2526151c; }
+  .pricing-card .button:hover { transform: none; }
+  .pricing-card .button:active { transform: scale(.98); }
+  .pricing-card .button-plan:active { background: #e9dfc5; border-color: #a78948; }
+}
 .pricing-note { display: flex; justify-content: space-between; gap: 25px; color: #818570; font-size: 8px; margin-top: 25px; }
 .pricing-note > span, .pricing-note > a { display: inline-flex; align-items: center; gap: 7px; line-height: 1.9; }
 .pricing-note > a { color: #63552e; white-space: nowrap; }
@@ -658,7 +678,7 @@ h2 { font-size: clamp(34px, 3.55vw, 52px); line-height: 1.12; letter-spacing: -2
 .company-section, .technology-section, .faq-section { overflow-x: clip; }
 [data-reveal-visible="true"] .eyebrow-line { transform-origin: left; animation: reveal-line .85s .15s both cubic-bezier(.22,1,.36,1); }
 [data-reveal-visible="true"] .statement-line { transform-origin: left; animation: reveal-line 1.2s .3s both cubic-bezier(.22,1,.36,1); }
-.pricing-grid > [data-reveal-visible="true"] .pricing-featured { animation: gold-arrival 1.6s .35s both ease-out; }
+.pricing-grid > [data-reveal-visible="true"] .pricing-featured { animation: gold-arrival 1.6s .35s backwards ease-out; }
 @keyframes reveal-line { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 @keyframes gold-arrival { 0% { box-shadow: 0 12px 35px #25261520; } 40% { box-shadow: 0 0 0 1px #d9bd7c75, 0 0 35px #b68c4045; } 100% { box-shadow: 0 12px 35px #25261520; } }
 @media (max-width: 600px) {
@@ -666,6 +686,7 @@ h2 { font-size: clamp(34px, 3.55vw, 52px); line-height: 1.12; letter-spacing: -2
   .hero-backdrop-image { transform: none !important; }
 }
 @media (prefers-reduced-motion: reduce) {
+  .pricing-card, .pricing-card .button, .pricing-card .button > svg { transform: none !important; }
   [data-scroll-reveal] { opacity: 1 !important; transform: none !important; }
   .hero-backdrop-image { transform: none !important; }
   .map-route { stroke-dasharray: none !important; stroke-dashoffset: 0 !important; }
