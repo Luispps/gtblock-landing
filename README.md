@@ -54,6 +54,8 @@ O número de WhatsApp foi mantido exatamente como enviado no briefing: `55719345
 
 O mapa é uma demonstração ilustrativa, sem conexão com dados de clientes. Não simula uma operação real nem executa bloqueios.
 
+As abas de tecnologia possuem demonstrações próprias em SVG: percurso de um veículo, etapas do comando de bloqueio e fluxo de dados em 2G/4G. Há controles de pausa e reinício; as animações param fora da tela e respeitam movimento reduzido. O fluxo entre redes é ilustrativo, sem escala de velocidade.
+
 ## Acessibilidade e interações
 
 Menu móvel com fechamento por Escape ou seleção de link, abas com setas/Home/End, FAQ nativo com `details`, foco visível, link para pular o conteúdo e respeito a `prefers-reduced-motion`.

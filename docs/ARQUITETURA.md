@@ -18,7 +18,7 @@ components/
   Hero.tsx                 Abertura e chamadas para ação
   FeatureGrid.tsx          Empresa e diferenciais
   TechTabs.tsx              Abas sobre rastreamento, bloqueio e conexão
-  TrackingMap.tsx           Mapa ilustrativo com rota animada
+  TechnologyDemo.tsx        Três demonstrações SVG interativas e animadas
   ScrollEffects.tsx         Navegação lateral e paralaxe
   RecoverySection.tsx       Pronta resposta e galeria de recuperados
   PricingSection.tsx        Oferta e composição dos planos
@@ -45,6 +45,7 @@ A composição visual usa classes próprias em `app/globals.css` e variáveis CS
 
 - O menu móvel mantém estado local e fecha ao selecionar uma seção ou pressionar Escape.
 - As abas de tecnologia e pronta resposta aceitam clique, setas, Home e End.
+- Cada aba de tecnologia monta somente a sua demonstração: veículo em rota, sequência de bloqueio ou transmissão pela rede 2G/4G. SVG nativo e CSS evitam vídeos e dependências adicionais. Os controles permitem pausar e reiniciar; o bloqueio permite explorar três etapas e a conexão permite alternar a rede. A animação pausa fora da tela e quando a página fica oculta. Movimento reduzido mantém gráficos estáticos e controles manuais.
 - A galeria filtra o acervo local por carros e motos. A rolagem horizontal é nativa, com scroll snap e controles por botão.
 - A ampliação usa `<dialog>` nativo. O foco fica no diálogo; Escape fecha, e as setas navegam entre fotos. A rolagem da página é restaurada ao fechar.
 - A navegação lateral observa as seções com `IntersectionObserver`. A linha de progresso usa os valores de rolagem do Framer Motion.
